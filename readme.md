@@ -1,0 +1,1 @@
+This project is to get data from the Trello boards to get an overview in a faster rate
