@@ -1,10 +1,14 @@
 import requests
 import json
+import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
 
 # using API key from rb_integrate app
 
-api_key='29358c89451eb131c93c518694bd2317'
-token='ATTA6d977895de70849f99491acfb2a3d37135bd7de5a8965f9c5c6a75a1a0e4fbdb702ADA4D'
+api_key= config.get('TRELLO API','api_key')
+token=config.get('TRELLO API','token')
 
 #boards endpoint
 get_url = f'https://api.trello.com/1/members/me/boards?key={api_key}&token={token}'
